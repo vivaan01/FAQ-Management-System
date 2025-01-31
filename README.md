@@ -11,6 +11,81 @@ A robust FAQ management system with WYSIWYG editor support and multi-language tr
 - React-based admin interface
 - Rate limiting for API protection
 
+
+## Project Structure
+```
+multilingual-faq/
+├── backend/
+│   ├── src/
+│   │   ├── controllers/
+│   │   │   └── faqController.ts
+│   │   ├── models/
+│   │   │   └── FAQ.ts
+│   │   ├── routes/
+│   │   │   └── faqRoutes.ts
+│   │   ├── services/
+│   │   │   ├── translationService.ts
+│   │   │   └── cacheService.ts
+│   │   └── middleware/
+│   │       ├── cache.ts
+│   │       └── errorHandler.ts
+│   ├── tests/
+│   │   └── faq.test.ts
+│   ├── config/
+│   │   ├── database.ts
+│   │   └── redis.ts
+│   ├── app.ts
+│   └── package.json
+│
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── Editor/
+│   │   │   │   ├── TipTapEditor.tsx
+│   │   │   │   └── Toolbar.tsx
+│   │   │   ├── FAQ/
+│   │   │   │   ├── FAQList.tsx
+│   │   │   │   ├── FAQItem.tsx
+│   │   │   │   └── FAQForm.tsx
+│   │   │   └── Layout/
+│   │   │       ├── Header.tsx
+│   │   │       └── Sidebar.tsx
+│   │   ├── services/
+│   │   │   └── api.ts
+│   │   ├── hooks/
+│   │   │   └── useFAQ.ts
+│   │   ├── App.tsx
+│   │   └── main.tsx
+│   ├── public/
+│   └── package.json
+│
+├── docker/
+│   ├── backend.Dockerfile
+│   └── frontend.Dockerfile
+│
+├── docker-compose.yml
+└── README.md
+```
+
+# Core Features
+
+- Rich text editing with TipTap WYSIWYG editor
+- Multi-language support (English, Hindi, Bengali)
+- Real-time translation using Google Translate API
+- Redis-based caching for improved performance
+- REST API for FAQ management
+- Admin dashboard for content management
+
+# Technical Features
+
+- TypeScript support throughout the stack
+- MongoDB for flexible document storage
+- Redis caching layer
+- Docker support for easy deployment
+- Comprehensive test coverage
+- Modern React components with Tailwind CSS
+
+
 ## Prerequisites
 
 - Node.js (v16 or higher)
@@ -35,8 +110,8 @@ TINYMCE_API_KEY=your-tinymce-key
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/faq-management-system.git
-cd faq-management-system
+git clone https://github.com/vivaan01/Faq-Management-System.git
+cd Faq-Management-System
 ```
 
 2. Install dependencies:
